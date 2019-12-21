@@ -1,0 +1,16 @@
+extend layout
+
+block content
+    .container 
+        .row
+            .col
+                h1 Corny Horror Movies - Registration
+                p Submit your sacrifice 
+                form(method="POST" action="/registerUser")
+                    .form-group
+                        label(for='user_name') Username
+                        input#user_name.form-control(type="text" aria-describedby='emailHelp' placeholder='Enter your username here' name="user_name")
+                    .form-group
+                        label(for='password') Password
+                        input#password.form-control(type='password' aria-describedby='emailHelp' placeholder='Enter your password here' name="password")
+                    button.btn.btn-primary Register

@@ -1,0 +1,17 @@
+extend layout
+
+block content
+    .container
+        .row
+            .col
+                h1 80's Corny Horror - Login
+                if registeredSuccessfully
+                    .alert.alert-success You can float too!
+                form(method="POST" action="/loginUser")
+                    .form-group
+                        label(for='user_name') User Name
+                        input#user_name.form-control(type='text' aria-describedby='emailHelp' placeholder='Enter User Name' name="user_name")
+                    .form-group
+                        label(for='password') Password
+                        input#password.form-control(type='password' aria-describedby='emailHelp' placeholder='Enter password' name="password")
+                    button.btn.btn-primary Login

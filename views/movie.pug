@@ -1,0 +1,17 @@
+extend explore
+
+block content
+    a(href='/explore/') Back to the Crypt!
+    h2= movies.title
+        ul
+            h3= "Task: " + movies.year
+            h3= "Rated: " + movies.movie_rating
+            h3= "Score: " + movies.social_rating
+            hr
+            form(method="POST" action="/account/favorites/add")
+                    input(type='hidden' name="movie_id" value=movie_id)
+                    button.btn.btn-primary Add to 'Wet My Pants List'
+            hr
+            form(method="POST" action="/account/to-watch/add")
+                    input(type='hidden' name="movie_id" value=movie_id)
+                    button.btn.btn-primary Add to 'My Pants Are Still Dry List'
